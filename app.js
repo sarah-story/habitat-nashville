@@ -18,7 +18,7 @@ $( document ).ready(function() {
             if (remaining_tickets > 0) {
                 var date = new Date(event.start.local);
                 date =  dayNames[date.getDay()] + ", " + monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
-                html += "<div class='well'><h2>" + event.name.html + "</h2><h4>" + date + "</h4><p>" + event.venue.address.address_1 + "</p><p>Remaining spots: <b>" + remaining_tickets + "</b></p><a class='btn btn-default' href='" + event.url + "' role='button' target='_blank'>Sign Up to Volunteer</a></div>";
+                html += "<div class='well'><h2>" + event.name.html + "</h2><h4>" + date + "</h4><p>" + event.venue.address.address_1 + "</p><p>" + event.description.html + "</p><p>Remaining spots: <b>" + remaining_tickets + "</b></p><a class='btn btn-default' href='" + event.url + "' role='button' target='_blank'>Sign Up to Volunteer</a></div>";
             }
         });
         $("#upcoming").html(html);
